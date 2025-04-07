@@ -1,6 +1,6 @@
 {
   "name": "nun-temp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "npm login && npm publish --access public"
+    "pub": "npm publish --access public"
   },
   "keywords": [],
   "author": "",
