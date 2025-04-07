@@ -12,7 +12,6 @@ program
   .description("Install your components")
   .action(async () => {
     const spinner = ora("Setting up components...").start();
-    const targetDir = "./src/components/app";
 
     try {
       if (fs.existsSync(targetDir)) {

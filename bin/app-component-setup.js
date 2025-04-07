@@ -2,6 +2,7 @@ import degit from "degit";
 
 export const appComponentSetup = async () => {
   try {
+    const targetDir = "./src/components/app";
     const emitter = degit("nesatkroper/own-components/components", {
       force: true,
     });
