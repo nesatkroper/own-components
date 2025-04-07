@@ -1,10 +1,10 @@
 {
-  "name": "nun-template",
-  "version": "1.0.0",
+  "name": "nun-temp",
+  "version": "1.0.2",
   "description": "Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!",
   "main": "index.js",
   "bin": {
-    "nun@template": "./bin/cli.js"
+    "nun-temp": "./bin/cli.js"
   },
   "type": "module",
   "scripts": {
@@ -18,6 +18,7 @@
     "commander": "^13.1.0",
     "degit": "^2.8.4",
     "fs-extra": "^11.3.0",
-    "ora": "^8.2.0"
+    "ora": "^8.2.0",
+    "prompts": "^2.4.2"
   }
 }
