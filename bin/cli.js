@@ -12,6 +12,7 @@ program
   .description("Install your components")
   .action(async () => {
     const spinner = ora("Setting up components...").start();
+    const targetDir = "./src/components/app";
 
     try {
       if (fs.existsSync(targetDir)) {
@@ -32,12 +33,13 @@ program
         spinner.start("Overwriting components...");
       }
 
-      appComponentSetup();
-      tailwindcssSetup();
+      await appComponentSetup(targetDir, spinner);
+      await tailwindcssSetup(spinner);
 
       spinner.succeed(chalk.green("Components installed successfully! 🎉"));
     } catch (err) {
       spinner.fail(chalk.red(`Error: ${err.message}`));
+      process.exit(1);
     }
   });
 

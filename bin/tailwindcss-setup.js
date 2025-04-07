@@ -1,7 +1,9 @@
-export const tailwindcssSetup = async () => {
-  // Add Tailwind installation
-  spinner.text = "Installing Tailwind CSS and dependencies...";
+import { execSync } from "child_process";
+import fs from "fs-extra";
+import chalk from "chalk";
+import prompts from "prompts";
 
+export const tailwindcssSetup = async (spinner) => {
   try {
     const { installTailwind } = await prompts({
       type: "confirm",
@@ -10,38 +12,29 @@ export const tailwindcssSetup = async () => {
       initial: true,
     });
 
-    if (installTailwind) {
-      const packageManager = fs.existsSync("yarn.lock")
-        ? "yarn"
-        : fs.existsSync("pnpm-lock.yaml")
-        ? "pnpm"
-        : "npm";
+    if (!installTailwind) return;
 
-      execSync(`${packageManager} add -D tailwindcss@3 postcss autoprefixer`, {
-        stdio: "inherit",
-      });
-    }
-    if (installTailwind) {
-      spinner.text = "Setting up Tailwind CSS...";
-      try {
-        execSync("npx tailwindcss init -p", { stdio: "inherit" });
-        spinner.succeed("Tailwind config created!");
-      } catch (err) {
-        spinner.fail("Failed to create Tailwind config.");
-        spinner.warn("Failed to install Tailwind automatically.");
-        console.log(chalk.blue("You can install it manually with:"));
-        console.log(
-          chalk.blue("npm install -D tailwindcss@3 postcss autoprefixer")
-        );
-      }
-    }
+    spinner.text = "Installing Tailwind CSS...";
 
-    spinner.succeed(chalk.green("Tailwind CSS installed successfully!"));
+    const packageManager = fs.existsSync("yarn.lock")
+      ? "yarn"
+      : fs.existsSync("pnpm-lock.yaml")
+      ? "pnpm"
+      : "npm";
+
+    execSync(`${packageManager} add -D tailwindcss@3 postcss autoprefixer`, {
+      stdio: "inherit",
+    });
+
+    spinner.text = "Configuring Tailwind...";
+    execSync("npx tailwindcss init -p", { stdio: "inherit" });
   } catch (err) {
-    spinner.warn(chalk.yellow("Failed to install Tailwind CSS automatically."));
-    console.log(chalk.blue("You may need to install Tailwind CSS manually:"));
+    spinner.fail("Tailwind setup failed");
+    console.log(chalk.blue("\nYou can try manually:"));
     console.log(
       chalk.blue("npm install -D tailwindcss@3 postcss autoprefixer")
     );
+    console.log(chalk.blue("npx tailwindcss init -p\n"));
+    throw err;
   }
 };
