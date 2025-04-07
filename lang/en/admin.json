@@ -1,0 +1,121 @@
+{
+  "lang": {
+    "en": "English",
+    "kh": "Khmer"
+  },
+  "header": {
+    "register": "បន្ថែមបុគ្គលិក",
+    "search": "ស្វែងរក ..."
+  },
+  "sidebar": {
+    "app-name": "Drug University",
+    "location": "Siem Reap",
+    "home": "Home",
+    "dash": "Dashboard",
+    "po": "POS",
+    "reserve": "Reservation",
+    "room": "Room",
+    "all-room": "All Room",
+    "room-pic": "Room Picture",
+    "pro": "Product",
+    "all-pro": "All Product",
+    "pro-cate": "Product Category",
+    "pro-brand": "Product Brand",
+    "cate": "Category",
+    "brand": "Brand",
+    "sup": "Supplier",
+    "cus": "Customer",
+    "human": "Human Resource",
+    "emp": "Employee",
+    "dep": "Department",
+    "pos": "Position",
+    "auth": "Authorization",
+    "setting": "Settings",
+    "gen": "General",
+    "lang": "Language",
+    "team": "Team",
+    "logout": "Logout",
+    "profile": "Profile",
+    "project": "Project",
+    "platform": "Platform",
+    "search": "Search something ..."
+  },
+  "home": {
+    "body": "lorem ipsum dolor sit amet, consectetur adip"
+  },
+  "opt": {
+    "act": "Actions",
+    "view": "View Item",
+    "edit": "Edit Item",
+    "remove": "Remove Item",
+    "restore": "Resote Item"
+  },
+  "table": {
+    "next": "Next",
+    "prev": "Previous",
+    "nores": "No results.",
+    "selected": "row(s) selected.",
+    "of": " of ",
+    "no": "No.",
+    "row": "Rows",
+    "col": "Column",
+    "reload": "Reload",
+    "search": "Search",
+    "roo": "Room",
+    "pic": "Picture",
+    "name": "Full Name",
+    "gen": "Gender",
+    "tel": "Phone",
+    "dob": "DOB",
+    "email": "Email",
+    "status": "Status",
+    "action": "Action",
+    "address": "Adress",
+    "desc": "Description",
+    "opt": {
+      "act": "Actions",
+      "ope": "Open menu",
+      "view": "View Item",
+      "edit": "Edit Item",
+      "remove": "Remove Item",
+      "restore": "Resote Item"
+    },
+    "room": {
+      "name": "Room Name",
+      "type": "Room Type",
+      "price": "Price",
+      "dis": "Discount Rate",
+      "total": "Total Room",
+      "size": "Room Size",
+      "bed": "Bed Type",
+      "capacity": "Capacity",
+      "ac": "AC",
+      "peo": "People",
+      "m": "m²",
+      "bath": "Bathroom",
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner"
+    },
+    "emp": {
+      "name": "Employee Name",
+      "code": "Emp Code",
+      "salary": "Salary"
+    },
+    "dep": {
+      "name": "Department Name",
+      "code": "Department Code"
+    },
+    "pos": {
+      "name": "Position Name",
+      "code": "Position Code"
+    },
+    "cus": {
+      "name": "Customer Name"
+    }
+  },
+  "toast": {
+    "remove": "Are you sure to remove this item?",
+    "restore": "This item will be restore."
+  }
+}
