@@ -1,6 +1,6 @@
 {
   "name": "nun-temp",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "type": "module",
   "bin": {
     "nun-temp": "./bin/cli.js"
