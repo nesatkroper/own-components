@@ -2,11 +2,10 @@
 import { program } from "commander";
 import chalk from "chalk";
 import ora from "ora";
-
 import fs from "fs-extra";
 import prompts from "prompts";
-import { tailwindcssSetup } from "./tailwindcss-setup";
-import { appComponentSetup } from "./app-component-setup";
+import { tailwindcssSetup } from "./tailwindcss-setup,js";
+import { appComponentSetup } from "./app-component-setup.js";
 
 program
   .command("init")
